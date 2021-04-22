@@ -18,7 +18,7 @@ public class FindMinAndMax {
 		//int n=Collections.min(al);
 		//int n=Collections.unmodifiableCollection(null)
 		al.contains(5);
-		System.out.println(n);
+		//System.out.println(n);
 	}
 
 }
