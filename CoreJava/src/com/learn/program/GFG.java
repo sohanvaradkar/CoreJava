@@ -31,11 +31,20 @@ class GFG {
 		}
 	}
 	
+	private static void displ(Integer s) {
+		System.out.println("Object called");
+
+	}
+	private static void displ(String s) {
+		System.out.println("string called");
+
+	}
 	// Driver function
 	public static void main(String[] args)
 	{
 		int n = 5;
-		reverseFibonacci(n);
+		//reverseFibonacci(n);
+		displ(null);
 	
 	}
 }
