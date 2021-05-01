@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -20,63 +21,46 @@ public class MostRepeatedWord
 	         
 	        try
 	        {
-	            //Creating BufferedReader object
-	             
 	            reader = new BufferedReader(new FileReader("C:\\\\SOHAN\\\\test.txt"));
-	             
-	            //Reading the first line into currentLine
-	             
+	            
 	            String currentLine = reader.readLine();
 	             
 	            while (currentLine != null)
-	            {   
-	                //splitting the currentLine into words
-	                 
+	            { 
 	                String[] words = currentLine.toLowerCase().split(" ");
-	                 
-	                //Iterating each word
 	                 
 	                for (String word : words)
 	                {
-	                    //if word is already present in wordCountMap, updating its count
-	                     
 	                    if(wordCountMap.containsKey(word))
 	                    {   
 	                        wordCountMap.put(word, wordCountMap.get(word)+1);
 	                    }
-	                     
-	                    //otherwise inserting the word as key and 1 as its value
+	                 
 	                    else
 	                    {
 	                        wordCountMap.put(word, 1);
 	                    }
 	                }
-	                 
-	                //Reading next line into currentLine
-	                 
+	                
 	                currentLine = reader.readLine();
 	            }
-	             
-	            //Getting the most repeated word and its occurrence
-	             
-	            String mostRepeatedWord = null;
-	             
-	            int count = 1;
-	             
+	           
+	            String mostLeastRepeatedWord = null;
+	            
+	            int minvalue = Collections.min(wordCountMap.values());
+	           
 	            Set<Entry<String, Integer>> entrySet = wordCountMap.entrySet();
-	            System.out.println(entrySet);
-	             
+	           
 	            for (Entry<String, Integer> entry : entrySet)
 	            {
-	                if(entry.getValue() == count) //checking first with one count
+	                if(entry.getValue() == minvalue) //checking first with one count
 	                {
-	                    mostRepeatedWord = entry.getKey();
-	                     
-	                    count = entry.getValue();
+	                    mostLeastRepeatedWord = entry.getKey();
+	                   
 	                }
 	            }
 	             
-	            System.out.println("The most least repeated word in input file is : "+mostRepeatedWord);
+	            System.out.println("The most least repeated word in input file is : "+mostLeastRepeatedWord+" count "+minvalue);
 	             
 	        } 
 	        catch (IOException e) 
