@@ -12,9 +12,7 @@ import java.util.Set;
 public class MostRepeatedWord 
 {
 	 public static void main(String[] args) 
-	    {   
-	        //Creating wordCountMap which holds words as keys and their occurrences as values
-	         
+	    { 
 	        HashMap<String, Integer> wordCountMap = new HashMap<String, Integer>();
 	     
 	        BufferedReader reader = null;
@@ -28,7 +26,7 @@ public class MostRepeatedWord
 	            while (currentLine != null)
 	            { 
 	                String[] words = currentLine.toLowerCase().split(" ");
-	                 
+	               //  System.out.println(words.toString());
 	                for (String word : words)
 	                {
 	                    if(wordCountMap.containsKey(word))
@@ -48,11 +46,12 @@ public class MostRepeatedWord
 	            String mostLeastRepeatedWord = null;
 	            
 	            int minvalue = Collections.min(wordCountMap.values());
-	           
+	           //System.out.println(minvalue);
 	            Set<Entry<String, Integer>> entrySet = wordCountMap.entrySet();
-	           
+	           System.out.println(entrySet);
 	            for (Entry<String, Integer> entry : entrySet)
 	            {
+	            	System.out.println(entry.getValue());
 	                if(entry.getValue() == minvalue) //checking first with one count
 	                {
 	                    mostLeastRepeatedWord = entry.getKey();

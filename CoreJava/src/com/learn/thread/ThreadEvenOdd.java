@@ -70,7 +70,7 @@ public class ThreadEvenOdd
 
 				// Print the number
 				
-Thread.sleep(1000);
+                 Thread.sleep(1000);
 				// Increment counter
 				counter++;
 
