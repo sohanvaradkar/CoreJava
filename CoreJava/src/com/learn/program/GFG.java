@@ -44,7 +44,7 @@ class GFG {
 	{
 		int n = 5;
 		//reverseFibonacci(n);
-		displ(null);
+		//displ(null);
 	
 	}
 }

@@ -20,10 +20,10 @@ public class FirstNonRepeatedChar
 			
 		}
 		for (char h : c) {
-			System.out.println(hm.get(h));
+			//System.out.println(hm.get(h));
 			if(hm.get(h)==1)
 			{
-				System.out.println(h);
+				System.out.println("first nonrepeated char is : "+h);
 				return;
 			}
 			

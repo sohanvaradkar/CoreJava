@@ -4,8 +4,9 @@ import java.util.HashMap;
 
 final class Employee 
 {
-int empid;
-String empname;
+private final int empid;
+private final String empname;
+
 
 
 public Employee(int empid, String empname) {
@@ -13,6 +14,7 @@ public Employee(int empid, String empname) {
 	this.empid = empid;
 	this.empname = empname;
 }
+
 public int getEmpid() {
 	return empid;
 }
@@ -27,6 +29,7 @@ public String getEmpname() {
 /*
  * public void setEmpname(String empname) { this.empname = empname; }
  */
+ 
 @Override
 public int hashCode() {
 	final int prime = 31;
@@ -72,8 +75,8 @@ public String toString() {
 		Employee ep1=new Employee(1, "RITESH");
 		//ep.setEmpname("RITESH");
 		
-		hs.put(ep, "obj1");
-		hs.put(ep1, "obj2");
+		hs.put(ep, null);
+		hs.put(ep1, null);
 		//ep.setEmpname("RITESH");
 		System.out.println(hs.toString());
 		

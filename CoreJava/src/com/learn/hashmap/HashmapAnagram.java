@@ -24,7 +24,7 @@ public class HashmapAnagram {
 				char[] letters = word.toCharArray();//c,a,t..7,5,8
 				Arrays.sort(letters);
 				String newWord = new String(letters);
-System.out.println(newWord);
+				System.out.println(newWord);
 				// calculate hashcode of string
 				// after sorting
 				if (map.containsKey(newWord)) {

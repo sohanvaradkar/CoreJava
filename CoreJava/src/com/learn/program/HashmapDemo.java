@@ -6,13 +6,15 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class HashmapDemo {
 public static void main(String[] args) {
-	Map<Integer, String> map=new ConcurrentHashMap<>();
-	map.put(null, "S");
-	map.put(null, "So");
-	System.out.println(map.hashCode());
-	//map.ge
+	Map<Integer, String> map=new HashMap<>();
+	map.put(null, "S1");
+	map.put(1, "S2");
+	map.put(2, "S3");
+	map.put(3, "S4");
+	
+
 	for(Map.Entry m : map.entrySet()){    
-	    System.out.println(m.getValue());    
+	    System.out.println(m.getValue()+" :: "+m.getKey());    
 	   } 
 	
 }
